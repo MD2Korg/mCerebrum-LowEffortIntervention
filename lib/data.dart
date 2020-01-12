@@ -1,0 +1,256 @@
+class Data{
+  static List<String> getMessage(bool cig, bool negativeAffect, bool choice){
+    List<Map<String, dynamic>> data = _getData();
+    for(int i =0;i<data.length;i++){
+      if(data[i]["cig"]!=cig) continue;
+      if(data[i]["negative_affect"]!=negativeAffect) continue;
+      if(data[i]["choice"]!=choice) continue;
+      return data[i]["message"];
+    }
+    return data[0]["message"];
+  }
+  static List<Map<String, dynamic>> _getData(){
+    return [
+      {
+        "cig": true,
+        "negative_affect": true,
+        "choice": false,
+        "message": [
+          "Call a supportive friend, talking about what is stressful can help you feel better.",
+          "When you are feeling stressed, hum a song that makes you smile.",
+          "If you are feeling tempted to smoke change the scenery --  leave any situation where cigarettes are available!",
+          "When you're feeling an urge to smoke, call a supportive friend who can help you resist the temptation.",
+          "Distract yourself from your craving to smoke by singing a song that makes you happy.",
+          " Try to distract yourself from urges or feeling down by doing something you enjoy, like reading a magazine.",
+          "Nearby cigarettes can make you feel stressed, so get rid of any you have!",
+          "Smoking will leave you feeling even worse later, for now take several slow, deep breaths.",
+          "You may feel better if you stay away from cigarettes by going for a walk.",
+          "If you want to smoke and you aren't feeling great, move to a new environment.",
+          "Improve your mood and finish a chore while listening to music.",
+          "You're in control! Do something you enjoy, like playing a game on your phone, to distract yourself.",
+          "Believe in yourself - you can do it! Take three slow deep breaths to feel more calm.",
+          "You got this!  Deep breathing will help you feel better and in more control. Breathe in, hold for 5 seconds, breathe out, and repeat.",
+          "You're in control! If you are feeling tempted to smoke change the scenery --  leave any situation with cigarettes around!",
+          "You deserve success! List the reasons you chose to quit to keep your motivation up.",
+          "You got this! Play a game to reduce stress.",
+          "You can do it! Nearby cigarettes can make you feel stressed or down. Try watching a favorite show to improve your mood.",
+          "Believe in yourself! You may feel better if you get rid of any cigarettes you have.",
+          "Stay strong, even if it’s tough! Remember that each time you resist the urge to smoke it gets easier.",
+          "Believe in yourself – you can do it! If you are feeling down, be sure to avoid being around cigarettes right now.",
+          "Remind yourself of three reasons you decided to quit smoking. Be proud of the work you're doing to change your life!",
+          "When you are feeling tempted to smoke drink a tall glass of water. You have what it takes to change!",
+          "If you are feeling stressed and tempted to smoke change the scenery --  leave any situation where cigarettes are available! You're in control!",
+          "Remind yourself that you’ll feel better later if you don't smoke. Quitting is hard, be patient with yourself!",
+          "Take control by getting rid of cigarettes. Believe in yourself - you can do it!",
+          "When you feel tempted by cigarettes, try to remind yourself why you want to quit. You deserve success!",
+          "Each time you resist a cigarette the next time will feel better. Right now, try going for a walk. You can and you will!",
+          "If you are feeling urges to smoke, go somewhere that smoking is not allowed. You got this!",
+          "Nicotine withdrawal can make you feel stressed, but remember that these feelings will pass. Stay strong, even if it's tough."
+        ]
+      },
+      {
+        "cig": true,
+        "negative_affect": true,
+        "choice": true,
+        "message": [
+          "Leave the situation until the temptation to smoke has passed or call a supportive friend, talking about what is stressful can help you feel better.",
+          "When you are feeling stressed, hum a song that makes you smoke, or leave the situation where cigarettes are available.",
+          "When you're feeling an urge to smoke, call a friend who can help you resist the temptation, or distract yourself by singing a song that makes you happy.",
+          "Nearby cigarettes can make you feel stressed, so get rid of any you have or try to distract yourself by doing something you enjoy like reading a magazine.",
+          "Smoking will leave you feeling worse later, for now take several slow, deep breaths, or try going for a walk.",
+          "If you want to smoke and don’t feel great, move to a new environment or finish a chore while listening to music.",
+          "You're in control! Do something you enjoy, like playing a game on your phone, to distract yourself or take three slow deep breaths to feel more calm.",
+          "You got this!  Leave any situation with cigarettes around, or try deep breathing if you feel stressed. Breathe in, hold for 5 seconds, breathe out, and repeat.",
+          "You deserve success! List the reasons you chose to quit to keep your motivation up or play a game to reduce stress.",
+          "Believe in yourself! Nearby cigarettes can make you feel stressed or down. Try watching a favorite show to improve your mood, or get rid of any cigarettes you have.",
+          "Stay strong, even if it’s tough! Remember that each time you resist the urge to smoke it gets easier or be sure to avoid being around cigarettes right now.",
+          "When you are feeling stressed, leave if cigarettes are available or drink tall glass of water. You're in control!",
+          "Remind yourself that you’ll feel better later if you don't smoke, or take control by getting rid of cigarettes.  Believe in yourself – you can do it!",
+          "When you feel tempted by cigarettes, try to remind yourself why you want to quit, or try going for a walk. You deserve success!",
+          "If you are feeling urges to smoke, go somewhere you won't see other smokers or remember that these feelings will pass. You got this!"
+        ]
+      },
+      {
+        "cig": false,
+        "negative_affect": true,
+        "choice": false,
+        "message": [
+          "Remind yourself that you ARE strong enough to get through stressful situations without smoking.",
+          "Take a five minute walk to help yourself de-stress.",
+          "Quitting can be tough, so try to relax. Try listening to calming music.",
+          "If you're feeling stressed or upset get extra support--call or text a friend or family member to lean on.",
+          "Remind yourself that you are capable of getting through the ups and downs that come with quitting.",
+          "Occupy your mind by going out for fresh air.",
+          "If you experience an urge, get some fresh air until the urge passes.",
+          "Reduce your bad feelings by taking several slow, deep breaths.",
+          "If you're feeling stressed or down, consider going for a walk.",
+          "Call a supportive friend or family member who can help you feel better.",
+          "Gratitude can help us feel more positive when things get hard. Think of three things you’re thankful for.",
+          "Stay strong, even if it's tough! Writing about what is making us feel bad can help improve our mood. Give it a try.",
+          "Quitting is difficult, but you can do it! Call/text a friend for support.",
+          "You got this! Deep breathing will help you feel better. Breathe in, hold for 5 seconds, breathe out, and repeat.",
+          "Stay strong, even if it's tough! We all have bad days and you will get through this. Reach out to a friend or family member.",
+          "You deserve success! Ask a friend to help you get through negative feelings.",
+          "Keep it up! Stress may increase your urge, but remember your goal of being a non-smoker.",
+          "Believe in yourself! Contact a friend when you're feeling down.",
+          "Stay strong, even if it's tough! Cope with feeling down by listening to a favorite song.",
+          "You’re in control! If you're feeling stressed, take several slow, deep breaths to calm yourself.",
+          "You deserve success! If you're having a rough patch, think about people and places that make you feel happy.",
+          "Remind yourself that you may be feeling stressed now but it will pass. Keep going, even if you have some ups and downs!",
+          "Distract yourself by planning fun weekend activities. You deserve success!",
+          "Remind yourself of your reasons for quitting. Keep going even if you have some ups and downs!",
+          "If you are feeling down, go for a walk. Quiting is hard, so be patient with yourself!",
+          "By quitting you may feel you've lost part of yourself - use this time to start a new healthy habit like walking 10 minutes a day. You deserve success!",
+          "Remember bad feelings get better with time. Quitting is hard, be patient with yourself!",
+          "Overcome bad feelings by watching something you enjoy. You can do it!",
+          "Manage feeling down by reaching out to supportive friends or family. Be patient with yourself!",
+          "Cope with feeling down by singing along with the radio. Stay strong, even if it's tough!",
+          " If you're feeling urges to smoke, remember you are a nonsmoker now. You got this!"
+        ]
+      },
+      {
+        "cig": false,
+        "negative_affect": true,
+        "choice": true,
+        "message": [
+          "Remind yourself that you ARE strong enough to get through stressful situations without smoking or take a five minute walk to de-stress.",
+          "Quitting can be tough, so try to relax.  Listen to calming music or call or text a family member or friend to lean on.",
+          "Occupy your mind by going out for fresh air, or remind yourself that you are capable of getting through the ups and downs that come with quitting.",
+          "If you experience an urge, get some fresh air until the urge passes, or try taking several slow, deep breaths.",
+          "If you're feeling stressed or down, consider going for a walk or calling a supportive friend/family member who can help you feel better.",
+          "Stay strong, even if it’s tough! Writing about what is making us feel bad can help improve our mood or call/text a friend for support.",
+          "Stay strong, even if it's tough! Reach out to a friend or try deep breathing. Breathe in, hold for 5 seconds, breathe out, and repeat.",
+          "You deserve success! Stress may increase your urge, but remember your goal of being a non-smoker. Or, ask a friend to help get through negative feelings.",
+          "Believe in yourself! Contact a friend when you're feeling down, or try listening to a favorite song.",
+          "You’re in control! If you're feeling stressed, take several slow, deep breaths to calm yourself or think about people and places that make you feel happy.",
+          "Remind yourself that you may be feeling stressed now but it will pass or distract yourself by planning fun weekend activities. You deserve success!",
+          "If you are feeling down, remind yourself of your reasons for quitting, or go for a walk.  Quitting is hard, so be patient with yourself!",
+          "By quitting you may feel you've lost part of yourself - use this time to start a new healthy habit like walking 10 mintues a day and remember bad feelings get better with time. You deserve success!",
+          "Overcome bad feelings by watching something you enjoy, or reaching out to supportive friends/family. You can do it!",
+          " If you're feeling urges to smoke remember you are a nonsmoker now or cope with feeling down by singing along with the radio. You got this!"
+        ]
+      },
+      {
+        "cig": true,
+        "negative_affect": false,
+        "choice": false,
+        "message": [
+          "Talk with someone supportive about your reasons for quitting.",
+          "If cigarettes are around remind yourself of your reasons for quitting.",
+          "If cigarettes are around change the scenery --  leave any situation where cigarettes are available!",
+          "If you're in a place that makes you think of cigarettes, think of a new routine you can start there.",
+          "Take deep breaths to help you resist the urge to smoke.",
+          "If you are nearby cigarettes, tell yourself, \"I don't NEED a cigarette\"",
+          "If you see people smoking, take several slow, deep breaths and exhale slowly.",
+          "If cigarettes are available, consider taking a walk.",
+          "Stay away from cigarettes. Try watching something you enjoy like your favorite TV show.",
+          "Instead of picking up a cigarette, do something new with your hands. An idea is to play a game on your phone!",
+          "Shift your focus away from cigarettes. Notice 5 smells, 5 sounds you can hear, and notice 5 things you haven’t noticed before!",
+          "You have the power! Do something to distract yourself until the urge has passed, like reading the news.",
+          "Be your best self! Tell yourself that you don’t NEED a cigarette.",
+          "You're in control! Step outside if people are smoking around you.",
+          "You got this! If cigarettes are around remind yourself that smoking is not an option and you chose not to smoke!",
+          "You're in control! Move away from tempting situations.",
+          "You got this! Distract yourself from your urge to smoke by fidgeting with a rubber band on your wrist.",
+          "You got this! If cigarettes are present, consider taking several slow, deep breaths.",
+          "Keep it up! If you are near cigarettes remind yourself that the urge will pass.",
+          "Quitting is hard, so be patient with yourself! Go somewhere where smoking is not an option.",
+          "You can and you will! If you see other smokers remember that you’re a nonsmoker now!",
+          "Leave the situation until the urge passes. Quitting is hard, but your life is worth the work.",
+          "List two reasons that made you decide to quit smoking. Believe in yourself - you can do it! ",
+          "If cigarettes are around call a friend for support. You have the power!",
+          "Avoid people who are smoking.   You are in control!",
+          "Remind yourself that resisting urges will be rewarding. Stay strong even if it's tough!",
+          "If you have an urge, tell a friend who can help you get through it. You got this!",
+          "If there are cigarettes nearby then leave, even if for a minute. Stay strong, even if its tough!",
+          "Even if you can get cigarettes remind yourself that you stopped smoking for your health. You got this!",
+          "If you are nearby cigarettes, get some fresh air. You're in control!",
+          "If you see other smokers remember that you’re a nonsmoker now! You can and you will!"
+        ]
+      },
+      {
+        "cig": true,
+        "negative_affect": false,
+        "choice": true,
+        "message": [
+          "If cigarettes are around, remind yourself of your reasons for quitting, or leave the situation!",
+          "If you're in a place that makes you think of cigarettes, think of a new routine you can start there, or take deep breaths to help you resist the urge to smoke.",
+          "If you see people smoking, take several slow, deep breaths and exhale slowly or tell yourself, \"I don't NEED a cigarette.\"",
+          "If cigarettes are available, consider taking a walk, or try watching something you enjoy like your favorite TV show.",
+          "Instead of picking up a cigarette, do something new with your hands, like playing a game on your phone or observe your surroundings! Notice 5 smells, 5 sounds, and 5 things you haven't noticed before.",
+          "You have the power! Do something to distract yourself until the urge has passed, like reading the news or tell yourself that you don’t NEED a cigarette.",
+          "You're in control! Step outside if people are smoking around you, or remind yourself that smoking is not an option.",
+          "You have the power! Distract yourself from your urge to smoke by fidgeting with a rubber band on your wrist or move away from tempting situations.",
+          "You got this! If cigarettes are present, consider taking several slow, deep breaths, or remind yourself that the urge will pass.",
+          "Quitting is hard, so be patient with yourself! If you see other smokers remember that you’re a nonsmoker now or go somewhere where smoking is not an option.",
+          "Leave a tempting situation until the urge passes or list two reasons you decided to quit smoking. Believe in yourself - you can do it!",
+          "If cigarettes are around, call a friend for support or avoid people who are smoking. You are in control!",
+          "If you have an urge, tell a friend who can help you get through it, or remind yourself that resisting urges will be rewarding. Stay strong even if it's tough!",
+          "If there are cigarettes nearby then leave, even if for a minute, or remind yourself that you stopped smoking for your health. Stay strong, even if it's tough!",
+          " If you see other smokers remember that you’re a nonsmoker now or get some fresh air. You're in control!"
+        ]
+      },
+      {
+        "cig": false,
+        "negative_affect": false,
+        "choice": false,
+        "message": [
+          "Practice taking three deep slow breaths now to help manage stress later.",
+          "Write a list in your phone of reasons you quit smoking. Read it if you have an urge.",
+          "Distract yourself during a craving with physical activity.",
+          "Keep something you enjoy like mints in your purse or pocket.",
+          "Think of how much money you will save by not buying cigarettes.",
+          "Surround yourself with people will give you positive support for the work you're doing.",
+          "Consider going for a walk.",
+          "Take the time to read something you enjoy.",
+          "Stay away from places where you know people will be smoking.",
+          "Review your reasons for quitting.",
+          "Breathe in for 5 counts, hold for 5 counts, and exhale for 5.",
+          "Change your position and get your blood flowing, e.g. stand up and stretch your legs.",
+          "You deserve success! Remind yourself that quitting isn't easy but you CAN do it.",
+          "Be proud of the work you're doing to change your life! Create a list of rewards you can give yourself for staying quit.",
+          "You deserve success! If family or friends smoke, ask them not to smoke or leave their cigarettes near you.",
+          "You're in control! Practice avoiding your triggers.",
+          "Quitting is hard, so be patient with yourself! Remind yourself of the reason you quit and let that motivate you to continue.",
+          "You got this! Link up with non-smoking friends to do something you enjoy like going to the movies.",
+          "You're in control!  Take the time today to talk to someone who supports you.",
+          "Keep it up! Take the time to treat yourself to a favorite movie",
+          "You got this! Talk to someone who is supportive of your efforts to quit",
+          "Keep it up! Remind yourself that smoking is not an option and that you chose not to smoke.",
+          "Think of a friend you could text if you feel an urge. Quitting is difficult, but you can do it!",
+          "Remind yourself that by quitting you are improving your health! You have what it takes to change!",
+          "Don't do it alone. Ask for support -- tell your friends exactly how they can help. Be proud of the work you're doing to change your life!",
+          "Remind yourself that smoking is not an option.  You CAN stay quit.",
+          "Ask a friend to help you start healthy routines that don’t include smoking. Believe in yourself - you can do it!",
+          "Think of how clean the air around you will be if you don’t smoke. You got this!",
+          "Avoid places that remind you of smoking. You have the power!",
+          "Remind yourself that quitting will improve your health. You have what it takes to change!",
+          "Remind yourself that smoking is not an option and that you chose not to smoke. You’re in control!"
+        ]
+      },
+      {
+        "cig": false,
+        "negative_affect": false,
+        "choice": true,
+        "message": [
+          "Practice taking three deep slow breaths now to help manage stress later or write a list in your phone of reasons you quit smoking. Read it if you have an urge.",
+          "Distract yourself during a craving with physical activity, or keep something you enjoy like mints in your purse or pocket.",
+          "Surround yourself with people who give you positive support for the work you're doing, or think of how much money you will save by not buying cigarettes.",
+          "Consider going for a walk, or take the time to read something you enjoy.",
+          "Stay away from places where you know people will be smoking or review your reasons for quitting.",
+          "Practice a breathing exercise or change your position and get your blood flowing. A breathing exercise could be- breathe in for 5 counts, hold for 5 counts, and exhale for 5.",
+          "You deserve success! Remind yourself that quitting isn't easy but you CAN do it or create a list of rewards you can give yourself for staying quit.",
+          "You're in control!  If family or friends smoke, ask them not to smoke or leave their cigarettes near you, or practice other ways to avoid your triggers.",
+          "You got this! Link up with non-smoking friends to do something you enjoy like going to the movies, or remind yourself of the reason you quit and let that motivate you to continue.",
+          "You're in control! Take the time today to talk to someone who supports you, or treat yourself to a favorite movie.",
+          "Keep it up! Remind yourself that smoking is not an option and that you chose not to smoke or talk to someone who is supportive of your efforts to quit.",
+          "Think of a friend you could text if you feel an urge or remind yourself that by quitting you are improving your health! You have what it takes to change!",
+          "Remind yourself that smoking is not an option, or ask for support -- tell your friends exactly how they can help.  You CAN stay quit!",
+          "Ask a friend to help you start healthy routines that don’t include smoking, or think of how clean the air around you will be if you don't smoke. You got this!",
+          "Avoid places that remind you of smoking, or remind yourself that quitting will improve your health. You have the power!"
+        ]
+      }
+    ];
+
+  }
+}
